@@ -6,7 +6,8 @@ class Main {
     for (Integer i = 0; i < upperlimit; i++ ) {
       String ibw = Integer.toBinaryString(i);
       String obw = Integer.toBinaryString(operand);
-        System.out.println(ibw + " ^ " + obw + " = " + (i ^ operand));
+      String result = Integer.toBinaryString(i^operand);
+        System.out.println(ibw + " ^ " + obw + " = " + result + " = " + (i ^ operand));
     }
     // System.out.println("\n|");
     // for (Integer i = 0; i < upperlimit; i++ ) {

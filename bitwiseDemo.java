@@ -1,26 +1,34 @@
 class Main {
   static void bitwise() {
-      Integer upperlimit = 5;
-      Integer operand = 2;
-    System.out.println("\n Bitwise XOR (^)");
-    for (Integer i = 0; i < upperlimit; i++ ) {
+    Integer lowerlimit = 0;
+    Integer upperlimit = 5;
+    Integer operand = 9;
+    System.out.println("\nBitwise OR (|)");
+    for (Integer i = lowerlimit; i < upperlimit; i++ ) {
+      String ibw = Integer.toBinaryString(i);
+      String obw = Integer.toBinaryString(operand);
+      String result = Integer.toBinaryString(i|operand);
+      System.out.println(ibw + " | " + obw + " = " + result + " = " + (i | operand));
+    }
+    System.out.println("\nBitwise AND (&)");
+    for (Integer i = lowerlimit; i < upperlimit; i++ ) {
+      String ibw = Integer.toBinaryString(i);
+      String obw = Integer.toBinaryString(operand);
+      String result = Integer.toBinaryString(i&operand);
+        System.out.println(ibw + " ^ " + obw + " = " + result + " = " + (i & operand));
+    }
+    System.out.println("\nBitwise XOR (^)");
+    for (Integer i = lowerlimit; i < upperlimit; i++ ) {
       String ibw = Integer.toBinaryString(i);
       String obw = Integer.toBinaryString(operand);
       String result = Integer.toBinaryString(i^operand);
         System.out.println(ibw + " ^ " + obw + " = " + result + " = " + (i ^ operand));
     }
-    // System.out.println("\n|");
-    // for (Integer i = 0; i < upperlimit; i++ ) {
-    //     System.out.println(i | operand);
-    // }
-    // System.out.println("\n&");
-    // for (Integer i = 0; i < upperlimit; i++ ) {
-    //     System.out.println(i & operand);
-    // }    
-    // System.out.println("\n~");
-    // for (Integer i = 0; i < upperlimit; i++ ) {
-    //     System.out.println(~i);
-    // }
+    System.out.println("\nBitwise Complement (~)");
+    for (Integer i = lowerlimit; i < upperlimit; i++ ) {
+      String result = Integer.toBinaryString(~i);
+        System.out.println(~i + " = " + result );
+    }
 }
   
   public static void main(String[] args) {
